@@ -287,71 +287,71 @@ class AdminTest(unittest.TestCase):
         browser.find_element(By.NAME, "btnSave").click()
         time.sleep(3)
 
-    # def test_g_delete_user_success(self):
-    #     #Login
-    #     browser = self.browser 
-    #     browser.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login")
-    #     time.sleep(3)
-    #     browser.find_element(By.NAME,"txtUsername").send_keys("Admin") 
-    #     time.sleep(1)
-    #     browser.find_element(By.NAME,"txtPassword").send_keys("admin123") 
-    #     time.sleep(1)
-    #     browser.find_element(By.NAME,"Submit").click() 
-    #     time.sleep(1)
+    def test_g_delete_user_success(self):
+        #Login
+        browser = self.browser 
+        browser.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login")
+        time.sleep(3)
+        browser.find_element(By.NAME,"txtUsername").send_keys("Admin") 
+        time.sleep(1)
+        browser.find_element(By.NAME,"txtPassword").send_keys("admin123") 
+        time.sleep(1)
+        browser.find_element(By.NAME,"Submit").click() 
+        time.sleep(1)
 
-    #     #Redirect User Management
-    #     browser.find_element(By.XPATH,"/html/body/div[1]/div[2]/ul/li[1]/a").click()
-    #     time.sleep(3)
+        #Redirect User Management
+        browser.find_element(By.XPATH,"/html/body/div[1]/div[2]/ul/li[1]/a").click()
+        time.sleep(3)
 
-    #     #Search User
-    #     browser.find_element(By.NAME, "searchSystemUser[userName]").send_keys("unchunch2")
-    #     time.sleep(1)
-    #     browser.find_element(By.NAME, "_search").click()
-    #     time.sleep(3)
+        #Search User
+        browser.find_element(By.NAME, "searchSystemUser[userName]").send_keys("unchunch2")
+        time.sleep(1)
+        browser.find_element(By.NAME, "_search").click()
+        time.sleep(3)
 
-    #     #Delete User
-    #     browser.find_element(By.NAME, "chkSelectRow[]").click()
-    #     time.sleep(1)
-    #     browser.find_element(By.NAME, "btnDelete").click()
-    #     time.sleep(1)
-    #     browser.find_element(By.ID, "dialogDeleteBtn").click()
-    #     time.sleep(3)
+        #Delete User
+        browser.find_element(By.NAME, "chkSelectRow[]").click()
+        time.sleep(1)
+        browser.find_element(By.NAME, "btnDelete").click()
+        time.sleep(1)
+        browser.find_element(By.ID, "dialogDeleteBtn").click()
+        time.sleep(3)
 
-    #     #Validate User Deleted
-    #     browser.refresh()
-    #     time.sleep(5)
-    #     browser.find_element(By.NAME, "searchSystemUser[userName]").send_keys("unchunch2")
-    #     time.sleep(1)
-    #     browser.find_element(By.NAME, "_search").click()
-    #     time.sleep(3)
-    #     check_user = browser.find_element(By.XPATH,"/html/body/div[1]/div[3]/div[2]/div/div/form/div[4]/table/tbody/tr/td").text
-    #     self.assertEqual(check_user, 'No Records Found')
+        #Validate User Deleted
+        browser.refresh()
+        time.sleep(5)
+        browser.find_element(By.NAME, "searchSystemUser[userName]").send_keys("unchunch2")
+        time.sleep(1)
+        browser.find_element(By.NAME, "_search").click()
+        time.sleep(3)
+        check_user = browser.find_element(By.XPATH,"/html/body/div[1]/div[3]/div[2]/div/div/form/div[4]/table/tbody/tr/td").text
+        self.assertEqual(check_user, 'No Records Found')
 
-    # def test_h_pagination_success(self):
-    #     #Login
-    #     browser = self.browser 
-    #     browser.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login")
-    #     time.sleep(3)
-    #     browser.find_element(By.NAME,"txtUsername").send_keys("Admin") 
-    #     time.sleep(1)
-    #     browser.find_element(By.NAME,"txtPassword").send_keys("admin123") 
-    #     time.sleep(1)
-    #     browser.find_element(By.NAME,"Submit").click() 
-    #     time.sleep(1)
+    def test_h_pagination_success(self):
+        #Login
+        browser = self.browser 
+        browser.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login")
+        time.sleep(3)
+        browser.find_element(By.NAME,"txtUsername").send_keys("Admin") 
+        time.sleep(1)
+        browser.find_element(By.NAME,"txtPassword").send_keys("admin123") 
+        time.sleep(1)
+        browser.find_element(By.NAME,"Submit").click() 
+        time.sleep(1)
 
-    #     #Redirect User Management
-    #     browser.find_element(By.XPATH,"/html/body/div[1]/div[2]/ul/li[1]/a").click()
-    #     time.sleep(3)
+        #Redirect User Management
+        browser.find_element(By.XPATH,"/html/body/div[1]/div[2]/ul/li[1]/a").click()
+        time.sleep(3)
 
-    #     #Pagination
-    #     browser.find_element(By.LINK_TEXT, "Next").click()
-    #     time.sleep(1)
-    #     browser.find_element(By.LINK_TEXT, "First").click()
-    #     time.sleep(2)
-    #     browser.find_element(By.LINK_TEXT, "Previous").click()
-    #     time.sleep(1)
-    #     browser.find_element(By.LINK_TEXT, "Last").click()
-    #     time.sleep(1)
+        #Pagination
+        browser.find_element(By.LINK_TEXT, "Next").click()
+        time.sleep(1)
+        browser.find_element(By.LINK_TEXT, "First").click()
+        time.sleep(2)
+        browser.find_element(By.LINK_TEXT, "Previous").click()
+        time.sleep(1)
+        browser.find_element(By.LINK_TEXT, "Last").click()
+        time.sleep(1)
 
 
     def tearDown(self): 
