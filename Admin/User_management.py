@@ -287,7 +287,7 @@ class AdminTest(unittest.TestCase):
         browser.find_element(By.NAME, "btnSave").click()
         time.sleep(3)
 
-    def test_g_delete_user_success(self):
+    def test_j_delete_user_success(self):
         #Login
         browser = self.browser 
         browser.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login")
@@ -327,7 +327,7 @@ class AdminTest(unittest.TestCase):
         check_user = browser.find_element(By.XPATH,"/html/body/div[1]/div[3]/div[2]/div/div/form/div[4]/table/tbody/tr/td").text
         self.assertEqual(check_user, 'No Records Found')
 
-    def test_h_pagination_success(self):
+    def test_k_pagination_success(self):
         #Login
         browser = self.browser 
         browser.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login")
