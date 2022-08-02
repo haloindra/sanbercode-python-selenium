@@ -255,7 +255,7 @@ class AdminTest(unittest.TestCase):
         ddelement = Select(browser.find_element(By.XPATH, "/html/body/div[1]/div[3]/div/div[2]/form/fieldset/ol/li[1]/select"))
         ddelement.select_by_value('1')
 
-        browser.find_element(By.NAME, "systemUser[employeeName][empName]").send_keys("@")
+        browser.find_element(By.NAME, "systemUser[employeeName][empName]").send_keys("")
         time.sleep(1)
 
         #Validation Employee Name
@@ -263,7 +263,7 @@ class AdminTest(unittest.TestCase):
         self.assertEqual(validation_employee, 'Employee does not exist')
         
 
-        browser.find_element(By.NAME, "systemUser[userName]").send_keys("^sai")
+        browser.find_element(By.NAME, "systemUser[userName]").send_keys("")
         time.sleep(1)
 
         #Validation Username
@@ -274,14 +274,14 @@ class AdminTest(unittest.TestCase):
         ddelement.select_by_value('1')
         
         time.sleep(1)
-        browser.find_element(By.NAME, "systemUser[password]").send_keys("asdasdniijijijijij")
+        browser.find_element(By.NAME, "systemUser[password]").send_keys("")
 
         #Validation Password
         validation_password = browser.find_element(By.XPATH,"/html/body/div[1]/div[3]/div/div[2]/form/fieldset/ol/li[6]/span").text
         self.assertEqual(validation_password, 'Should have at least 8 characters')
 
         time.sleep(1)
-        browser.find_element(By.NAME, "systemUser[confirmPassword]").send_keys("asdasdniijijijijij")
+        browser.find_element(By.NAME, "systemUser[confirmPassword]").send_keys("")
         time.sleep(1)
 
         browser.find_element(By.NAME, "btnSave").click()
