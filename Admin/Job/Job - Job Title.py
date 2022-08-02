@@ -24,6 +24,7 @@ class AdminTest(unittest.TestCase):
 
         browser.find_element(By.XPATH, "/html/body/div[1]/div[2]/ul/li[1]/a").click()
         time.sleep(2)
+        
         #Hover to Job Title
         job = browser.find_element(By.XPATH, "/html/body/div[1]/div[2]/ul/li[1]/ul/li[2]/a")
         job_title = browser.find_element(By.XPATH, "/html/body/div[1]/div[2]/ul/li[1]/ul/li[2]/ul/li[1]/a")
